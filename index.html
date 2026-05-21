@@ -1,3 +1,4 @@
+Index · HTML
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
-
+ 
   <style>
     :root {
       --bg-deep:        #080b11;
@@ -32,7 +33,7 @@
       --radius-lg: 20px;
       --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     }
-
+ 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
@@ -49,7 +50,7 @@
     ::-webkit-scrollbar { width: 5px; }
     ::-webkit-scrollbar-track { background: var(--bg-deep); }
     ::-webkit-scrollbar-thumb { background: var(--green); border-radius: 99px; }
-
+ 
     body::before {
       content: '';
       position: fixed;
@@ -59,7 +60,7 @@
       z-index: 9999;
       opacity: 0.4;
     }
-
+ 
     .bg-grid {
       position: fixed; inset: 0;
       background-image:
@@ -71,16 +72,16 @@
     .bg-orb { position: fixed; border-radius: 50%; filter: blur(120px); pointer-events: none; z-index: 0; }
     .bg-orb-1 { width: 600px; height: 600px; top: -200px; left: -200px; background: radial-gradient(circle, rgba(0,255,135,0.07) 0%, transparent 70%); }
     .bg-orb-2 { width: 500px; height: 500px; bottom: 10%; right: -150px; background: radial-gradient(circle, rgba(0,191,255,0.07) 0%, transparent 70%); }
-
+ 
     .container { width: min(1140px, 100%); margin-inline: auto; padding-inline: clamp(1.25rem, 5vw, 2.5rem); }
-
+ 
     .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
     .reveal-delay-1 { transition-delay: 0.1s; }
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
     .reveal-delay-4 { transition-delay: 0.4s; }
-
+ 
     .section-label {
       display: inline-flex; align-items: center; gap: 0.5rem;
       font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.15em;
@@ -89,7 +90,7 @@
     .section-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--green); }
     .section-title { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; color: var(--text-primary); letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 1rem; }
     .section-subtitle { color: var(--text-secondary); font-size: 1rem; max-width: 520px; line-height: 1.7; }
-
+ 
     /* NAV */
     header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; transition: background var(--transition), backdrop-filter var(--transition), border-color var(--transition); border-bottom: 1px solid transparent; }
     header.scrolled { background: rgba(8, 11, 17, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom-color: var(--border); }
@@ -104,10 +105,10 @@
     .nav-status { display: flex; align-items: center; gap: 0.5rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--green); }
     .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse-dot 2s infinite; }
     @keyframes pulse-dot { 0%, 100% { opacity: 1; box-shadow: 0 0 0 0 var(--green-glow); } 50% { opacity: 0.7; box-shadow: 0 0 0 5px transparent; } }
-
+ 
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
     .hamburger span { display: block; width: 22px; height: 2px; background: var(--text-secondary); border-radius: 2px; transition: var(--transition); }
-
+ 
     @media (max-width: 768px) {
       .hamburger { display: flex; }
       .nav-links { position: fixed; inset: 0 0 0 40%; background: rgba(8, 11, 17, 0.97); backdrop-filter: blur(20px); flex-direction: column; justify-content: center; align-items: flex-start; padding: 2rem; gap: 2rem; transform: translateX(100%); transition: transform var(--transition); z-index: 200; }
@@ -115,7 +116,7 @@
       .nav-links a { font-size: 1rem; }
       .nav-status { display: none; }
     }
-
+ 
     /* HERO */
     #hero { position: relative; min-height: 100svh; display: grid; place-items: center; padding-block: 7rem 4rem; overflow: hidden; }
     .hero-content { position: relative; z-index: 2; max-width: 820px; }
@@ -124,7 +125,7 @@
     .hero-name { font-size: clamp(3rem, 9vw, 6.5rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1; margin-bottom: 0.5rem; animation: fadeInUp 0.9s 0.1s ease both; background: linear-gradient(135deg, #e2e8f0 40%, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .hero-role { font-family: var(--font-mono); font-size: clamp(0.8rem, 2vw, 1rem); color: var(--text-secondary); letter-spacing: 0.05em; margin-bottom: 2.5rem; animation: fadeInUp 0.9s 0.2s ease both; }
     .hero-role .accent { color: var(--blue); }
-
+ 
     .terminal { background: rgba(13, 17, 23, 0.8); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-family: var(--font-mono); font-size: 0.8rem; backdrop-filter: blur(12px); max-width: 500px; animation: fadeInUp 0.9s 0.3s ease both; }
     .terminal-bar { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.75rem; }
     .terminal-dot { width: 10px; height: 10px; border-radius: 50%; }
@@ -134,7 +135,7 @@
     .terminal-prompt { color: var(--green); }
     .terminal-cursor { display: inline-block; width: 8px; height: 1em; background: var(--green); vertical-align: text-bottom; animation: blink 1.1s step-end infinite; }
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-
+ 
     .hero-cta { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; animation: fadeInUp 0.9s 0.4s ease both; }
     .btn-primary { position: relative; display: inline-flex; align-items: center; gap: 0.5rem; background: var(--green); color: var(--bg-deep); font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; padding: 0.85rem 1.75rem; border-radius: var(--radius-sm); border: none; cursor: pointer; transition: var(--transition); overflow: hidden; }
     .btn-primary::after { content: ''; position: absolute; inset: 0; background: white; opacity: 0; transition: opacity var(--transition); }
@@ -142,12 +143,12 @@
     .btn-primary:hover::after { opacity: 0.08; }
     .btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary); letter-spacing: 0.08em; padding: 0.85rem 1.75rem; border-radius: var(--radius-sm); border: 1px solid var(--border); transition: var(--transition); }
     .btn-secondary:hover { border-color: var(--blue); color: var(--blue); box-shadow: 0 0 20px var(--blue-glow); }
-
+ 
     .hero-scan { position: absolute; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--green), transparent); animation: scan 4s ease-in-out infinite; opacity: 0.4; z-index: 1; }
     @keyframes scan { 0% { top: 0; opacity: 0; } 10% { opacity: 0.4; } 90% { opacity: 0.4; } 100% { top: 100%; opacity: 0; } }
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes fadeInDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
-
+ 
     /* STATS */
     .stats-strip { background: rgba(13, 17, 23, 0.7); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding-block: 1.5rem; position: relative; z-index: 2; }
     .stats-inner { display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 1.5rem; }
@@ -156,7 +157,7 @@
     .stat-label { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.25rem; font-family: var(--font-mono); }
     .stat-sep { width: 1px; height: 40px; background: var(--border); }
     @media (max-width: 600px) { .stat-sep { display: none; } }
-
+ 
     /* SOBRE */
     #sobre { padding-block: clamp(5rem, 10vw, 8rem); position: relative; z-index: 2; }
     .sobre-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
@@ -165,7 +166,7 @@
     .sobre-text p .hl { color: var(--text-primary); font-weight: 600; }
     .sobre-text p .hl-green { color: var(--green); font-weight: 600; }
     .sobre-text p .hl-blue  { color: var(--blue); font-weight: 600; }
-
+ 
     .sobre-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.75rem; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); position: relative; overflow: hidden; }
     .sobre-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, var(--green-dim) 0%, transparent 60%); pointer-events: none; }
     .profile-badge { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
@@ -177,7 +178,7 @@
     .info-icon { font-family: var(--font-mono); color: var(--blue); font-size: 0.75rem; flex-shrink: 0; margin-top: 0.15rem; }
     .info-label { color: var(--text-muted); font-size: 0.72rem; font-family: var(--font-mono); }
     .info-val { color: var(--text-primary); font-size: 0.875rem; }
-
+ 
     /* ARSENAL */
     #arsenal { padding-block: clamp(5rem, 10vw, 8rem); position: relative; z-index: 2; }
     .arsenal-header { margin-bottom: 3rem; }
@@ -192,17 +193,17 @@
     .skill-card-desc { color: var(--text-secondary); font-size: 0.875rem; line-height: 1.65; margin-bottom: 1.25rem; }
     .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
     .skill-tag { font-family: var(--font-mono); font-size: 0.65rem; padding: 0.25rem 0.6rem; border-radius: 4px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: var(--text-muted); letter-spacing: 0.05em; }
-
+ 
     /* CERTIFICADOS */
     #certificados { padding-block: clamp(5rem, 10vw, 8rem); position: relative; z-index: 2; }
     .cert-header { margin-bottom: 3rem; }
-
+ 
     .cert-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 1rem;
     }
-
+ 
     .cert-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -233,7 +234,7 @@
     .cert-card:hover::before {
       background: linear-gradient(90deg, transparent, var(--green-glow), transparent);
     }
-
+ 
     /* badge de certificação (diferente de curso) */
     .cert-card.is-cert {
       border-color: rgba(0,255,135,0.2);
@@ -241,20 +242,20 @@
     .cert-card.is-cert::before {
       background: linear-gradient(90deg, transparent, rgba(0,255,135,0.4), transparent);
     }
-
+ 
     .cert-top {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
       gap: 0.75rem;
     }
-
+ 
     .cert-issuer-row {
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
-
+ 
     .cert-issuer-icon {
       width: 32px; height: 32px;
       border-radius: 6px;
@@ -269,7 +270,7 @@
       flex-shrink: 0;
       letter-spacing: -0.03em;
     }
-
+ 
     .cert-issuer {
       font-family: var(--font-mono);
       font-size: 0.65rem;
@@ -277,7 +278,7 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
-
+ 
     .cert-type-badge {
       font-family: var(--font-mono);
       font-size: 0.6rem;
@@ -290,21 +291,21 @@
     }
     .badge-cert  { background: rgba(0,255,135,0.1); border: 1px solid rgba(0,255,135,0.25); color: var(--green); }
     .badge-curso { background: rgba(0,191,255,0.08); border: 1px solid rgba(0,191,255,0.18); color: var(--blue); }
-
+ 
     .cert-title {
       font-size: 0.9rem;
       font-weight: 600;
       color: var(--text-primary);
       line-height: 1.4;
     }
-
+ 
     .cert-meta {
       display: flex;
       align-items: center;
       gap: 1rem;
       flex-wrap: wrap;
     }
-
+ 
     .cert-date {
       font-family: var(--font-mono);
       font-size: 0.62rem;
@@ -323,14 +324,14 @@
       color: var(--green);
       opacity: 0.5;
     }
-
+ 
     .cert-id {
       font-family: var(--font-mono);
       font-size: 0.6rem;
       color: var(--text-muted);
       letter-spacing: 0.05em;
     }
-
+ 
     .cert-tags {
       display: flex;
       flex-wrap: wrap;
@@ -345,7 +346,7 @@
       border: 1px solid var(--border);
       color: var(--text-muted);
     }
-
+ 
     .cert-stats-row {
       margin-top: 1.5rem;
       display: flex;
@@ -371,7 +372,7 @@
       text-transform: uppercase;
       letter-spacing: 0.1em;
     }
-
+ 
     /* PROJETOS */
     #projetos { padding-block: clamp(5rem, 10vw, 8rem); position: relative; z-index: 2; }
     .projects-header { margin-bottom: 3rem; }
@@ -398,7 +399,7 @@
     .metric { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.75rem; }
     .metric-val { font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700; color: var(--green); }
     .metric-key { font-family: var(--font-mono); font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.2rem; }
-
+ 
     /* FOOTER */
     footer { position: relative; z-index: 2; border-top: 1px solid var(--border); padding-block: 4rem; }
     .footer-inner { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 2rem; }
@@ -417,11 +418,11 @@
   </style>
 </head>
 <body>
-
+ 
   <div class="bg-grid" aria-hidden="true"></div>
   <div class="bg-orb bg-orb-1" aria-hidden="true"></div>
   <div class="bg-orb bg-orb-2" aria-hidden="true"></div>
-
+ 
   <header id="site-header" role="banner">
     <div class="container">
       <nav role="navigation" aria-label="Main navigation">
@@ -443,7 +444,7 @@
       </nav>
     </div>
   </header>
-
+ 
   <main>
     <section id="hero" aria-label="Introduction">
       <div class="hero-scan" aria-hidden="true"></div>
@@ -451,12 +452,12 @@
         <div class="hero-content">
           <div class="hero-tag" aria-label="Status indicator">
             <div class="hero-tag-dot" aria-hidden="true"></div>
-            Blue Team Specialist &middot; Disponivel para Projetos
+            Blue Team Specialist &middot; Disponível para Projetos
           </div>
           <h1 class="hero-name">Higor Rodrigues</h1>
           <p class="hero-role">
-            Sistemas de Informacao &nbsp;&middot;&nbsp; <span class="accent">Infraestrutura de Redes</span>
-            &nbsp;&amp;&nbsp; Ciberseguranca Defensiva
+            Sistemas de Informação &nbsp;&middot;&nbsp; <span class="accent">Infraestrutura de Redes</span>
+            &nbsp;&amp;&nbsp; Cibersegurança Defensiva
           </p>
           <div class="terminal" aria-label="Terminal simulation">
             <div class="terminal-bar" aria-hidden="true">
@@ -481,7 +482,7 @@
         </div>
       </div>
     </section>
-
+ 
     <div class="stats-strip" aria-label="Key metrics">
       <div class="container">
         <div class="stats-inner">
@@ -507,30 +508,30 @@
         </div>
       </div>
     </div>
-
+ 
     <div class="divider" aria-hidden="true"></div>
-
+ 
     <section id="sobre" aria-labelledby="sobre-heading">
       <div class="container">
         <div class="sobre-grid">
           <div class="sobre-text">
-            <div class="section-label reveal">Trajetoria</div>
-            <h2 class="section-title reveal reveal-delay-1" id="sobre-heading">Quem esta por tras dos firewalls</h2>
+            <div class="section-label reveal">Trajetória</div>
+            <h2 class="section-title reveal reveal-delay-1" id="sobre-heading">Quem está por trás dos firewalls</h2>
             <div class="reveal reveal-delay-2">
               <p>
-                Minha jornada na tecnologia comecou cedo, mas tomou forma real quando passei a entender que
-                <span class="hl">seguranca nao e uma feature &mdash; e uma postura</span>. Como graduando em
-                <span class="hl-green">Sistemas de Informacao na Unimontes</span>, construo a base teorica que sustenta a minha atuacao pratica.
+                Minha jornada na tecnologia começou cedo, mas tomou forma real quando passei a entender que
+                <span class="hl">segurança não é uma feature &mdash; é uma postura</span>. Como graduando em
+                <span class="hl-green">Sistemas de Informação na Unimontes</span>, construo a base teórica que sustenta a minha atuação prática.
               </p>
               <p>
-                No <span class="hl">DTI da Unimontes</span>, atuo diretamente na administracao de infraestrutura de redes e servidores, gerenciando ambientes que exigem resiliencia continua. Minha rotina envolve o controle rigoroso de
-                <span class="hl-blue">firewalls, proxies reversos e politicas de acesso</span>, focando na mitigacao de riscos e na protecao de ativos criticos da instituicao.
+                No <span class="hl">DTI da Unimontes</span>, atuo diretamente na administração de infraestrutura de redes e servidores, gerenciando ambientes que exigem resiliência contínua. Minha rotina envolve o controle rigoroso de
+                <span class="hl-blue">firewalls, proxies reversos e políticas de acesso</span>, focando na mitigação de riscos e na proteção de ativos críticos da instituição.
               </p>
               <p>
-                A analise detalhada de trafego, a identificacao de anomalias e o hardening de servidores sao atividades que executo em cenarios reais. Essa vivencia moldou uma abordagem metodica, orientada a evidencias e focada na protecao de perimetros contra vetores de comprometimento.
+                A análise detalhada de tráfego, a identificação de anomalias e o hardening de servidores são atividades que executo em cenários reais. Essa vivência moldou uma abordagem metódica, orientada a evidências e focada na proteção de perímetros contra vetores de comprometimento.
               </p>
               <p>
-                O meu foco e a area de <span class="hl-green">Blue Team</span>, concentrando esforcos na defesa ativa, monitoramento continuo e arquitetura de redes seguras. Acredito que proteger uma infraestrutura exige disciplina tecnica e um entendimento aprofundado sobre superficies de exposicao.
+                O meu foco é a área de <span class="hl-green">Blue Team</span>, concentrando esforços na defesa ativa, monitoramento contínuo e arquitetura de redes seguras. Acredito que proteger uma infraestrutura exige disciplina técnica e um entendimento aprofundado sobre superfícies de exposição.
               </p>
             </div>
           </div>
@@ -547,28 +548,28 @@
                 <li class="info-item">
                   <span class="info-icon" aria-hidden="true">&#9658;</span>
                   <div>
-                    <div class="info-label">FORMACAO</div>
-                    <div class="info-val">Sistemas de Informacao &middot; Unimontes</div>
+                    <div class="info-label">FORMAÇÃO</div>
+                    <div class="info-val">Sistemas de Informação &middot; Unimontes</div>
                   </div>
                 </li>
                 <li class="info-item">
                   <span class="info-icon" aria-hidden="true">&#9658;</span>
                   <div>
-                    <div class="info-label">POSICAO ATUAL</div>
+                    <div class="info-label">POSIÇÃO ATUAL</div>
                     <div class="info-val">Infra. de Redes &mdash; DTI / Unimontes</div>
                   </div>
                 </li>
                 <li class="info-item">
                   <span class="info-icon" aria-hidden="true">&#9658;</span>
                   <div>
-                    <div class="info-label">ESPECIALIZACAO</div>
-                    <div class="info-val">Ciberseguranca Defensiva (Blue Team)</div>
+                    <div class="info-label">ESPECIALIZAÇÃO</div>
+                    <div class="info-val">Cibersegurança Defensiva (Blue Team)</div>
                   </div>
                 </li>
                 <li class="info-item">
                   <span class="info-icon" aria-hidden="true">&#9658;</span>
                   <div>
-                    <div class="info-label">LOCALIZACAO</div>
+                    <div class="info-label">LOCALIZAÇÃO</div>
                     <div class="info-val">Montes Claros, MG &middot; Brasil</div>
                   </div>
                 </li>
@@ -576,7 +577,7 @@
                   <span class="info-icon" aria-hidden="true">&#9658;</span>
                   <div>
                     <div class="info-label">STATUS</div>
-                    <div class="info-val" style="color: var(--green);">&#9679; Disponivel para projetos</div>
+                    <div class="info-val" style="color: var(--green);">&#9679; Disponível para projetos</div>
                   </div>
                 </li>
               </ul>
@@ -585,26 +586,26 @@
         </div>
       </div>
     </section>
-
+ 
     <div class="divider" aria-hidden="true"></div>
-
+ 
     <section id="arsenal" aria-labelledby="arsenal-heading">
       <div class="container">
         <div class="arsenal-header">
           <div class="section-label reveal">Capacidades</div>
-          <h2 class="section-title reveal reveal-delay-1" id="arsenal-heading">Arsenal Tecnico</h2>
+          <h2 class="section-title reveal reveal-delay-1" id="arsenal-heading">Arsenal Técnico</h2>
           <p class="section-subtitle reveal reveal-delay-2">
             Ferramentas e dominios que compoem minha stack defensiva aplicados em ambientes de infraestrutura real.
           </p>
         </div>
         <div class="skills-grid" role="list">
-
+ 
           <article class="skill-card reveal" role="listitem">
             <div class="skill-card-icon" aria-hidden="true">FW</div>
-            <div class="skill-card-sub">Seguranca de Perimetro</div>
+            <div class="skill-card-sub">Segurança de Perímetro</div>
             <h3 class="skill-card-title">Firewall &amp; Acesso</h3>
             <p class="skill-card-desc">
-              Configuracao e gestao de politicas de firewall em ambientes de servidores, controle de trafego com proxies reversos e hardening de sistemas operacionais para reducao sistematica da superficie de ataque.
+              Configuração e gestão de políticas de firewall em ambientes de servidores, controle de tráfego com proxies reversos e hardening de sistemas operacionais para redução sistemática da superfície de ataque.
             </p>
             <div class="skill-tags" aria-label="Related technologies">
               <span class="skill-tag">pfSense</span>
@@ -614,13 +615,13 @@
               <span class="skill-tag">Hardening</span>
             </div>
           </article>
-
+ 
           <article class="skill-card reveal reveal-delay-1" role="listitem">
             <div class="skill-card-icon" aria-hidden="true">PKT</div>
-            <div class="skill-card-sub">Auditoria &amp; Analise</div>
-            <h3 class="skill-card-title">Analise de Trafego</h3>
+            <div class="skill-card-sub">Auditoria &amp; Análise</div>
+            <h3 class="skill-card-title">Análise de Tráfego</h3>
             <p class="skill-card-desc">
-              Captura e inspecao detalhada de pacotes em nivel de rede para identificacao de comportamentos anomalos, falhas criticas de configuracao de portas e diagnostico de exposicao de servicos em tempo real.
+              Captura e inspeção detalhada de pacotes em nível de rede para identificação de comportamentos anômalos, falhas críticas de configuração de portas e diagnóstico de exposição de serviços em tempo real.
             </p>
             <div class="skill-tags" aria-label="Related technologies">
               <span class="skill-tag">Wireshark</span>
@@ -629,13 +630,13 @@
               <span class="skill-tag">PCAP Analysis</span>
             </div>
           </article>
-
+ 
           <article class="skill-card reveal reveal-delay-2" role="listitem">
             <div class="skill-card-icon" aria-hidden="true">SRV</div>
             <div class="skill-card-sub">Infraestrutura</div>
             <h3 class="skill-card-title">Sistemas &amp; Redes</h3>
             <p class="skill-card-desc">
-              Administracao de servidores Linux corporativos, gerencia e isolamento de DNS, DHCP e VLANs, alem de monitoramento continuo de disponibilidade e integridade dos ativos de rede ativos.
+              Administração de servidores Linux corporativos, gerência e isolamento de DNS, DHCP e VLANs, além de monitoramento contínuo de disponibilidade e integridade dos ativos de rede ativos.
             </p>
             <div class="skill-tags" aria-label="Related technologies">
               <span class="skill-tag">Linux</span>
@@ -645,13 +646,13 @@
               <span class="skill-tag">Zabbix</span>
             </div>
           </article>
-
+ 
           <article class="skill-card reveal reveal-delay-3" role="listitem">
             <div class="skill-card-icon" aria-hidden="true">CTR</div>
             <div class="skill-card-sub">Ambientes Isolados</div>
             <h3 class="skill-card-title">Containers &amp; Lab</h3>
             <p class="skill-card-desc">
-              Uso de containers Docker para empacotamento e isolamento de ferramentas de auditoria, garantindo ambientes de execucao seguros, reproduziveis e desacoplados do sistema operacional host.
+              Uso de containers Docker para empacotamento e isolamento de ferramentas de auditoria, garantindo ambientes de execução seguros, reproduzíveis e desacoplados do sistema operacional host.
             </p>
             <div class="skill-tags" aria-label="Related technologies">
               <span class="skill-tag">Docker</span>
@@ -661,13 +662,13 @@
               <span class="skill-tag">Shell Script</span>
             </div>
           </article>
-
+ 
         </div>
       </div>
     </section>
-
+ 
     <div class="divider" aria-hidden="true"></div>
-
+ 
     <!-- ═══════════════════════════════════════════
          CERTIFICADOS
     ════════════════════════════════════════════ -->
@@ -675,9 +676,9 @@
       <div class="container">
         <div class="cert-header">
           <div class="section-label reveal">Credenciais</div>
-          <h2 class="section-title reveal reveal-delay-1" id="cert-heading">Certificados &amp; Certificacoes</h2>
+          <h2 class="section-title reveal reveal-delay-1" id="cert-heading">Certificados &amp; Certificações</h2>
           <p class="section-subtitle reveal reveal-delay-2">
-            Formacao continua em ciberseguranca, infraestrutura e praticas defensivas por instituicoes especializadas.
+            Formação contínua em cibersegurança, infraestrutura e práticas defensivas por instituições especializadas.
           </p>
           <div class="cert-stats-row reveal reveal-delay-3">
             <div class="cert-stat">
@@ -686,7 +687,7 @@
             </div>
             <div class="cert-stat">
               <span class="cert-stat-val">01</span>
-              <span class="cert-stat-label">Certificacao</span>
+              <span class="cert-stat-label">Certificação</span>
             </div>
             <div class="cert-stat">
               <span class="cert-stat-val">11</span>
@@ -694,19 +695,19 @@
             </div>
           </div>
         </div>
-
+ 
         <div class="cert-grid">
-
+ 
           <!-- CERTIFICACAO Fortinet -->
-          <article class="cert-card is-cert reveal" aria-label="Certificacao Fortinet">
+          <article class="cert-card is-cert reveal" aria-label="Certificação Fortinet">
             <div class="cert-top">
               <div class="cert-issuer-row">
                 <div class="cert-issuer-icon">FTN</div>
                 <span class="cert-issuer">Fortinet</span>
               </div>
-              <span class="cert-type-badge badge-cert">&#9670; Certificacao</span>
+              <span class="cert-type-badge badge-cert">&#9670; Certificação</span>
             </div>
-            <div class="cert-title">Introducao ao Cenario de Ameacas</div>
+            <div class="cert-title">Introdução ao Cenário de Ameaças</div>
             <div class="cert-meta">
               <span class="cert-date">nov 2025</span>
             </div>
@@ -715,9 +716,9 @@
               <span class="cert-tag">CTI</span>
             </div>
           </article>
-
-          <!-- IBSEC Seguranca Linux -->
-          <article class="cert-card reveal reveal-delay-1" aria-label="Certificado IBSEC Seguranca Linux">
+ 
+          <!-- IBSEC Segurança Linux -->
+          <article class="cert-card reveal reveal-delay-1" aria-label="Certificado IBSEC Segurança Linux">
             <div class="cert-top">
               <div class="cert-issuer-row">
                 <div class="cert-issuer-icon">IBS</div>
@@ -725,7 +726,7 @@
               </div>
               <span class="cert-type-badge badge-curso">&#9632; Curso</span>
             </div>
-            <div class="cert-title">Seguranca Linux</div>
+            <div class="cert-title">Segurança Linux</div>
             <div class="cert-meta">
               <span class="cert-date">jan 2026 &middot; exp jan 2029</span>
               <span class="cert-id">ID: f43c989484a2ba4f</span>
@@ -736,9 +737,9 @@
               <span class="cert-tag">Linux Hardening</span>
             </div>
           </article>
-
+ 
           <!-- IBSEC Boas Praticas -->
-          <article class="cert-card reveal reveal-delay-2" aria-label="Certificado IBSEC Boas Praticas">
+          <article class="cert-card reveal reveal-delay-2" aria-label="Certificado IBSEC Boas Práticas">
             <div class="cert-top">
               <div class="cert-issuer-row">
                 <div class="cert-issuer-icon">IBS</div>
@@ -746,7 +747,7 @@
               </div>
               <span class="cert-type-badge badge-curso">&#9632; Curso</span>
             </div>
-            <div class="cert-title">Boas Praticas de Ciberseguranca</div>
+            <div class="cert-title">Boas Práticas de Cibersegurança</div>
             <div class="cert-meta">
               <span class="cert-date">jan 2026 &middot; exp jan 2029</span>
               <span class="cert-id">ID: #a2f7fe9943fc77c4</span>
@@ -755,7 +756,7 @@
               <span class="cert-tag">Security Best Practices</span>
             </div>
           </article>
-
+ 
           <!-- Alura XSS / Mass Assignment -->
           <article class="cert-card reveal reveal-delay-3" aria-label="Certificado Alura Java Security">
             <div class="cert-top">
@@ -765,7 +766,7 @@
               </div>
               <span class="cert-type-badge badge-curso">&#9632; Curso</span>
             </div>
-            <div class="cert-title">Seguranca web em Java pt. 2: XSS, Mass Assignment e Uploads</div>
+            <div class="cert-title">Segurança web em Java pt. 2: XSS, Mass Assignment e Uploads</div>
             <div class="cert-meta">
               <span class="cert-date">mai 2026</span>
             </div>
@@ -775,9 +776,9 @@
               <span class="cert-tag">Java</span>
             </div>
           </article>
-
+ 
           <!-- Alura Modelagem de Ameacas -->
-          <article class="cert-card reveal" aria-label="Certificado Alura Modelagem de Ameacas">
+          <article class="cert-card reveal" aria-label="Certificado Alura Modelagem de Ameaças">
             <div class="cert-top">
               <div class="cert-issuer-row">
                 <div class="cert-issuer-icon">ALU</div>
@@ -785,7 +786,7 @@
               </div>
               <span class="cert-type-badge badge-curso">&#9632; Curso</span>
             </div>
-            <div class="cert-title">Modelagem de Ameacas: identifique riscos na concepcao do software</div>
+            <div class="cert-title">Modelagem de Ameaças: identifique riscos na concepção do software</div>
             <div class="cert-meta">
               <span class="cert-date">mai 2026</span>
             </div>
@@ -794,7 +795,7 @@
               <span class="cert-tag">Risk Assessment</span>
             </div>
           </article>
-
+ 
           <!-- Alura OWASP Top 10 -->
           <article class="cert-card reveal reveal-delay-1" aria-label="Certificado Alura OWASP">
             <div class="cert-top">
@@ -814,7 +815,7 @@
               <span class="cert-tag">Access Control</span>
             </div>
           </article>
-
+ 
           <!-- TryHackMe Pre Security -->
           <article class="cert-card reveal reveal-delay-2" aria-label="Certificado TryHackMe Pre Security">
             <div class="cert-top">
@@ -835,7 +836,7 @@
               <span class="cert-tag">Web Fundamentals</span>
             </div>
           </article>
-
+ 
           <!-- Cisco Intro Ciberseguranca -->
           <article class="cert-card reveal reveal-delay-3" aria-label="Certificado Cisco Ciberseguranca">
             <div class="cert-top">
@@ -845,7 +846,7 @@
               </div>
               <span class="cert-type-badge badge-curso">&#9632; Curso</span>
             </div>
-            <div class="cert-title">Introducao a Ciberseguranca</div>
+            <div class="cert-title">Introdução à Cibersegurança</div>
             <div class="cert-meta">
               <span class="cert-date">out 2025</span>
             </div>
@@ -853,7 +854,7 @@
               <span class="cert-tag">Cybersecurity Fundamentals</span>
             </div>
           </article>
-
+ 
           <!-- Alura Docker -->
           <article class="cert-card reveal" aria-label="Certificado Alura Docker">
             <div class="cert-top">
@@ -873,7 +874,7 @@
               <span class="cert-tag">Containers</span>
             </div>
           </article>
-
+ 
           <!-- Alura Proxy Reverso SSH DNS -->
           <article class="cert-card reveal reveal-delay-1" aria-label="Certificado Alura Proxy SSH DNS">
             <div class="cert-top">
@@ -883,7 +884,7 @@
               </div>
               <span class="cert-type-badge badge-curso">&#9632; Curso</span>
             </div>
-            <div class="cert-title">Seguranca de rede: proxy reverso, SSH e DNS</div>
+            <div class="cert-title">Segurança de rede: proxy reverso, SSH e DNS</div>
             <div class="cert-meta">
               <span class="cert-date">set 2025</span>
             </div>
@@ -893,7 +894,7 @@
               <span class="cert-tag">DNS</span>
             </div>
           </article>
-
+ 
           <!-- Alura Firewall WAF SIEM -->
           <article class="cert-card reveal reveal-delay-2" aria-label="Certificado Alura Firewall WAF SIEM">
             <div class="cert-top">
@@ -903,7 +904,7 @@
               </div>
               <span class="cert-type-badge badge-curso">&#9632; Curso</span>
             </div>
-            <div class="cert-title">Seguranca de rede: firewall, WAF e SIEM</div>
+            <div class="cert-title">Segurança de rede: firewall, WAF e SIEM</div>
             <div class="cert-meta">
               <span class="cert-date">set 2025</span>
             </div>
@@ -914,7 +915,7 @@
               <span class="cert-tag">SIEM</span>
             </div>
           </article>
-
+ 
           <!-- Alura Pentest Web -->
           <article class="cert-card reveal reveal-delay-3" aria-label="Certificado Alura Pentest Web">
             <div class="cert-top">
@@ -924,7 +925,7 @@
               </div>
               <span class="cert-type-badge badge-curso">&#9632; Curso</span>
             </div>
-            <div class="cert-title">Pentest: Explorando vulnerabilidades em aplicacoes web</div>
+            <div class="cert-title">Pentest: Explorando vulnerabilidades em aplicações web</div>
             <div class="cert-meta">
               <span class="cert-date">set 2025</span>
             </div>
@@ -934,23 +935,23 @@
               <span class="cert-tag">Web Pentest</span>
             </div>
           </article>
-
+ 
         </div>
       </div>
     </section>
-
+ 
     <div class="divider" aria-hidden="true"></div>
-
+ 
     <section id="projetos" aria-labelledby="projetos-heading">
       <div class="container">
         <div class="projects-header">
-          <div class="section-label reveal">Vitrine Tecnica</div>
+          <div class="section-label reveal">Vitrine Técnica</div>
           <h2 class="section-title reveal reveal-delay-1" id="projetos-heading">Projetos em Destaque</h2>
           <p class="section-subtitle reveal reveal-delay-2">
-            Solucoes estruturadas construidas para analise de seguranca defensiva e auditoria de redes.
+            Soluções estruturadas construídas para análise de segurança defensiva e auditoria de redes.
           </p>
         </div>
-
+ 
         <article class="project-featured reveal reveal-delay-1" aria-label="Featured project: CS 1.6 Network Audit Scanner">
           <div class="project-visual">
             <canvas class="net-canvas" id="net-canvas" aria-hidden="true"></canvas>
@@ -962,7 +963,7 @@
             <div class="project-number">// PROJETO_001</div>
             <h3 class="project-title">CS 1.6 Network Audit<br>&amp; Exposure Scanner</h3>
             <p class="project-desc">
-              Ferramenta desenvolvida para auditoria etica e mapeamento de ativos de infraestrutura expostos. Capaz de analisar metadados publicos de rede, classificar scores de risco de seguranca automaticamente e documentar falhas de hardening e exposicao de consoles administrativos.
+              Ferramenta desenvolvida para auditoria ética e mapeamento de ativos de infraestrutura expostos. Capaz de analisar metadados públicos de rede, classificar scores de risco de segurança automaticamente e documentar falhas de hardening e exposição de consoles administrativos.
             </p>
             <div class="project-metrics" aria-label="Project metrics">
               <div class="metric">
@@ -971,7 +972,7 @@
               </div>
               <div class="metric">
                 <div class="metric-val">OSI-L3</div>
-                <div class="metric-key">Nivel de Analise</div>
+                <div class="metric-key">Nível de Análise</div>
               </div>
             </div>
             <div class="project-tech" aria-label="Technologies used">
@@ -987,15 +988,15 @@
         </article>
       </div>
     </section>
-
+ 
     <div class="divider" aria-hidden="true"></div>
   </main>
-
+ 
   <footer id="contato" role="contentinfo" aria-label="Contact and footer">
     <div class="container">
       <div class="footer-inner">
         <div>
-          <p class="footer-sub">// INICIAR CONEXAO</p>
+          <p class="footer-sub">// INICIAR CONEXÃO</p>
           <h2 class="footer-title">Vamos <span style="color:var(--green)">trabalhar</span><br>juntos?</h2>
         </div>
         <nav class="footer-links" aria-label="Contact links">
@@ -1021,16 +1022,16 @@
       </div>
     </div>
   </footer>
-
+ 
   <script>
   (() => {
     'use strict';
-
+ 
     const header = document.getElementById('site-header');
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY > 40);
     }, { passive: true });
-
+ 
     const hamburger = document.getElementById('hamburger');
     const navLinks  = document.getElementById('nav-links');
     hamburger.addEventListener('click', () => {
@@ -1043,7 +1044,7 @@
         hamburger.setAttribute('aria-expanded', false);
       });
     });
-
+ 
     const phrases = [
       'analyzing network traffic...',
       'firewall policies -- OK',
@@ -1056,7 +1057,7 @@
     ];
     let phraseIdx = 0, charIdx = 0, deleting = false;
     const termEl = document.getElementById('terminal-text');
-
+ 
     function typeLoop() {
       const current = phrases[phraseIdx];
       if (!deleting) {
@@ -1070,12 +1071,12 @@
       }
     }
     setTimeout(typeLoop, 800);
-
+ 
     const revealObs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-
+ 
     const countObs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (!e.isIntersecting) return;
@@ -1091,7 +1092,7 @@
       });
     }, { threshold: 0.5 });
     document.querySelectorAll('[data-count]').forEach(el => countObs.observe(el));
-
+ 
     const canvas = document.getElementById('net-canvas');
     if (canvas) {
       const ctx = canvas.getContext('2d');
