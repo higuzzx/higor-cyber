@@ -83,6 +83,16 @@
       position: relative; overflow: hidden;
       margin-bottom: 1.5rem;
     }
+    .cv-header-inner {
+      display: flex; align-items: center; gap: 1.75rem;
+    }
+    .cv-photo {
+      width: 88px; height: 88px; border-radius: 50%;
+      object-fit: cover; object-position: center top;
+      flex-shrink: 0;
+      border: 2px solid rgba(0,255,135,0.3);
+      box-shadow: 0 0 0 4px rgba(0,255,135,0.08), 0 0 24px rgba(0,255,135,0.15);
+    }
     .cv-header::before {
       content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
       background: linear-gradient(90deg, var(--green), var(--blue));
@@ -213,6 +223,12 @@
       }
       .cv-header::before { display: none; }
 
+      .cv-header-inner { gap: 14pt !important; }
+      .cv-photo {
+        width: 72pt !important; height: 72pt !important;
+        border: 1.5pt solid #0f2044 !important;
+        box-shadow: none !important;
+      }
       .cv-name {
         font-size: 22pt !important; color: #0f2044 !important;
         -webkit-text-fill-color: #0f2044 !important;
@@ -295,6 +311,9 @@
 
     <!-- CABEÇALHO -->
     <header class="cv-header">
+      <div class="cv-header-inner">
+      <img class="cv-photo" src="foto.jpg" alt="Higor Rodrigues" />
+      <div>
       <div class="cv-name">Higor Samuel Rodrigues</div>
       <div class="cv-role">// ANALISTA DE SEGURANÇA DA INFORMAÇÃO JÚNIOR</div>
       <div class="cv-contacts">
@@ -319,6 +338,8 @@
           linkedin.com/in/higuzx
         </span>
       </div>
+      </div><!-- /texto -->
+      </div><!-- /cv-header-inner -->
     </header>
 
     <!-- GRID PRINCIPAL -->
